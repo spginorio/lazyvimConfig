@@ -19,5 +19,4 @@ vim.keymap.set("n", "<leader><C-T>", ":ToggleTerm<CR>", { desc = "Toggle Termina
 exitTerm = function()
   vim.cmd(":ToggleTerm")
 end
-
 vim.keymap.set("t", "<esc><esc>", exitTerm)
