@@ -14,4 +14,3 @@ vim.keymap.set("i", "<C-z>", "<Esc>u", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-z>", "", { noremap = true, silent = true })
 
 -- ToggleTerm
-vim.keymap.set("n", "<leader>TH", ":ToggleTerm direction=horizontal<CR>", { desc = "Toggle Horizontal Terminal" })
