@@ -14,3 +14,10 @@ vim.keymap.set("i", "<C-z>", "<Esc>u", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-z>", "", { noremap = true, silent = true })
 
 -- ToggleTerm
+vim.keymap.set("n", "<leader><C-T>", ":ToggleTerm<CR>", { desc = "Toggle Terminal" })
+--vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { desc = "Exit Terminal Mode" })
+exitTerm = function()
+  vim.cmd(":ToggleTerm")
+end
+
+vim.keymap.set("t", "<esc><esc>", exitTerm)
