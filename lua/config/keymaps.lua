@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 --
---Go to Dashboard
+-- Go to Dashboard
 vim.keymap.set("n", "<leader>h", ":Alpha<CR>")
 
 -- Ctrl+Z
@@ -20,3 +20,9 @@ exitTerm = function()
   vim.cmd(":ToggleTerm")
 end
 vim.keymap.set("t", "<esc><esc>", exitTerm)
+
+--Flutter Commands
+--vim.keymap.set("n", "<leader><C-FR>", ":FlutterRun<CR>", { desc = "Flutter Run" })
+vim.api.nvim_create_user_command("FR", "FlutterRun", {})
+vim.api.nvim_create_user_command("FD", "FlutterDevices", {})
+vim.api.nvim_create_user_command("FE", "FlutterEmulators", {})
